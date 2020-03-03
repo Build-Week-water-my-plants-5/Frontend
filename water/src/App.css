@@ -1,9 +1,10 @@
+/* Pre made CSS */
 .App {
   text-align: center;
-  background-color: #1ca746;
+  background-color: #90a14380;
   height: 100vh;
 }
-
+/* Changed .App to have height and a background */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -16,7 +17,7 @@
 }
 
 .App-header {
-  background-color: #3ebd64;
+  background-color: #cdd48f;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -37,4 +38,30 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+
+/* Custom CSS */
+
+
+.Log-N-Sign{
+  padding-top: 3%;
+  display:flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.Log{
+  width: 12%;
+  padding:1% 5%;
+  background-color: rgba(26, 167, 125, 0.884);
+  border-radius: 10px;
+}
+
+.Sign{
+  width: 12%;
+  padding:1% 5%;
+  background-color: rgba(26, 167, 125, 0.884);
+  border-radius: 10px;
 }
