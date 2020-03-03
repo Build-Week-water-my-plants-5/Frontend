@@ -59,14 +59,14 @@ const FormikUserForm = withFormik({
 
   validationSchema: Yup.object().shape({
     name: Yup.string().required("Enter Name"),
-    number: Yup.number().required("Enter Number"),
-    password: Yup.string().required("Enter Password")
+    password: Yup.string().required("Enter Password"),
+    number: Yup.number().required("Enter Phone Number")
   }),
 
   handleSubmit(values, { setStatus, resetForm }) {
     console.log("submitting", values);
     axios
-      .post("https://reqres.in/api/users/", values)
+      .post("https://wmpbackend.herokuapp.com/api/auth/login", values)
       .then(res => {
         console.log("success", res);
         setStatus(res.data);

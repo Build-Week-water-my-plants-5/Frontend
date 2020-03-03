@@ -15,9 +15,10 @@ function App() {
           <Header> <Welcome/> </Header>
          
       <div className='Log-N-Sign'>
-        <div className='Log'> <Login/> <br></br> <span>Forgot Password?</span> </div>
-        <div className='Sign'> <SignUp/>  </div>
         
+        <div className='Sign'> <SignUp/>  </div>
+        <div className='Log'> <Login/> <br></br> <a href='https://soundcloud.com/v-hines'>Forgot Password?</a> </div>
+      
       </div>
 
     </div>

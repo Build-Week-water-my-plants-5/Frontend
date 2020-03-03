@@ -67,7 +67,14 @@ const Signup = ({ values, errors, touched, status }) => {
             <p className="errors">{errors.repassword}</p>
           )}
         </label>
-        <button type="Sign">Sign Up!</button>
+        <label htmlFor="number">
+                                        Phone Number 
+          <Field id="number" type="text" name="number" placeholder="Enter Phone Number" />
+          {touched.number && errors.number && (
+            <p className="errors">{errors.number}</p>
+          )}
+        </label>
+        <button className="" type="submit">Sign Up!</button>
       </Form>
     </div>
   );
@@ -81,16 +88,17 @@ const FormikUserForm = withFormik({
       username: props.username || "",
       password: props.password || "",
       repassword: props.repassword || "",
+      number: props.number || "",
     };
   },
 
   // Declare shape and requirement of values object (form state )
   validationSchema: Yup.object().shape({
-    username: Yup.string().required("Create Username"),
     // passing a string in required makes a custom inline error msg
+    username: Yup.string().required("Create Username"),
     password: Yup.string().required("Create Password"),
-    repassword: Yup.string().required("Re-Enter Your Password")
-
+    repassword: Yup.string().required("Re-Enter Password"),
+    number: Yup.string().required("Enter Phone Number")
   }),
 
   // passed through props (magically) to Form component in Formik
@@ -100,7 +108,7 @@ const FormikUserForm = withFormik({
   handleSubmit(values, { setStatus, resetForm }) {
     console.log("submitting", values);
     axios
-      .post("https://reqres.in/api/users/", values)
+      .post("https://wmpbackend.herokuapp.com/api/auth/login", values)
       .then(res => {
         console.log("success", res);
         // sends a status update through props in Signup with value as res.data content
