@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Header from "./Components/Header";
+
 import SignUp from "./Components/SignUp";
 import Login from "./Components/Login";
 import CreatePlant from "./Components/CreatePlant";
