@@ -1,10 +1,14 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^0.19.2",
     "formik": "^2.1.4",
     "react-password-mask": "^3.3.1",
     "react-router-dom": "^5.1.2",
     "styled-components": "^5.0.1",
     "yup": "^0.28.1"
+=======
+    "react-router-dom": "^5.1.2"
+>>>>>>> 610abe4904de712f6b78ba43f55c24fdc3b3e86c
   }
 }
